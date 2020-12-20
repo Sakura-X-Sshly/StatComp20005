@@ -241,7 +241,7 @@ should contain at least a couple of LaTeX formulas.
 
 A1. We draw a plot of the data set (x, y) and implement linear regression on it. Finally, the resulting regression line is added to the plot.
 
-```{r}
+```{r,eval=FALSE}
 x <- c(1,2,3,4,5,6,7,8,9,10)
 y <- c(1,3,4.5,4,6,7,6,7.5,8,9)
 #plot(x,y)
@@ -504,7 +504,7 @@ f_1(x)=e^{-x},x>1,\quad f_2(x)=4/(1+x^{2})\pi),x>1
 \end{align}
 as two important functions. Note that the variance of $\hat\theta$ is $var(g(X_{i})/f({X_{i}}))/m$, where $m$ is the size of random sample. Thus if $f$ is closer to $g$, the variance will smaller. If $g=cf$, the variance has the minimal value 0 for some constant $c$. Then we draw the figure of function $g/f1$ and $g/f2$. The flatter the image is, the smaller the variance in estimating the integral is.
 
-```{r}
+```{r,eval=FALSE}
 x=seq(1,5,0.01) #generate sequence x
 g=(x^2*exp(-x^2/2))/sqrt(2*pi)
 f1=exp(-x) #the first importance function
@@ -625,7 +625,7 @@ for heavy-tailed symmetric alternatives such as $t(\nu)$?
 ## Answer 1
 This question is similar to example 6.10 in Statistical Computing with R. We compute the sample skewness statistic through function sscoef. And we know the asymptotic distribution of the sample skewness statistic, which is the rule to estimate the power against Beta distribution and t distribution. Let the significance level be 0.1. The R code is as follows. 
 
-```{r}
+```{r,eval=FALSE}
 #computes the sample skewness statistic
 sscoef=function(x) { 
   x1=mean(x)
@@ -1181,7 +1181,7 @@ each chain.
 
 ## Answer 1
 We set $\sigma=c(0.05,0.5,2,16)$ and find that when $\sigma=0.5$ or $2$, the rejected rate is in (0.15,0.5). Then we show the Q-Q plot and true density when $\sigma=0.5$.
-```{r}
+```{r,eval=FALSE}
 # density function of the standard Laplace distribution
 fsld=function(x) 0.5*exp(-abs(x))
 
